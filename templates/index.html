@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор сложных процентов</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename = 'css.css')}}">
+</head>
+    <h1>Калькулятор сложных процентов</h1>
+<body>
+    <form method="POST" action="{{ url_for('form') }}">
+            <p class="question">Введите вашу первоначальную сумму</p>
+            <input class="name" type="number" name="name1" placeholder="" onchange='eventForm(this.value)'>
+            <p class="question">На какой процент?</p>
+            <input class="name" type="number" name="name2" placeholder="" onchange='eventForm(this.value)'>
+            <p class="question">На какой срок?</p>
+            <input class="name" type="number" name="name3" placeholder="" onchange='eventForm(this.value)'>
+            <button class="buttonstyle">Расчитать</button>
+            <h2>Вы заработаете: {{a}}</h2>
+
+    </form>
+
+</body>
+</html>
